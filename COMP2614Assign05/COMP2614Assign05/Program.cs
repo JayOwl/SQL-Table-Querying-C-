@@ -15,7 +15,9 @@ namespace COMP2614Assign05
 
             try
             {
-                CustomerCollection customers = CustomerRepository.GetAllCustomers();
+                // CustomerCollection customers = CustomerRepository.GetAllCustomers();
+                CustomerCollection customers = CustomerRepository.GetAllProvincesFromCustomers();
+
                 ConsolePrinter.PrintCustomerCollection(customers);
 
             }

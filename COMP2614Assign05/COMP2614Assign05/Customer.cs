@@ -33,7 +33,5 @@ namespace COMP2614Assign05
             CreditHold = creditHold;
         }
 
-
-
     }
 }
