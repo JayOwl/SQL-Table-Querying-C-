@@ -24,5 +24,25 @@ namespace COMP2614Assign05
             Console.WriteLine($"{customer.CustomerCode, -30}{customer.CompanyName,-30}{customer.Address,-30}{customer.City,-30}{customer.Province,-30}{customer.PostalCode,-30}{customer.CreditHold,-30}");
         }
 
+        public static void PrintProvincesCollection(ProvincesCollection provinces)
+        {
+            string divider = new string('-', 70);
+
+
+            foreach (Provinces province in provinces)
+            {
+               // var selectedProvinces = provinces.GroupBy(x => new { x.Province }).Select(g => g.First());
+
+                PrintProvinces(province);
+                //PrintProvinces(selectedProvinces);
+            }
+
+        }
+
+        public static void PrintProvinces(Provinces province)
+        {
+            Console.WriteLine($"{province.Province,-30}");
+        }
+
     }
 }

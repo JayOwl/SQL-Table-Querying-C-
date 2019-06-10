@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP2614Assign05
 {
-    class Provinces
+    class ProvincesCollection : List<Provinces>
     {
-
-        public string Province { get; }
-
-        public Provinces(string province)
-        {
-            Province = province;
-        }
     }
 }

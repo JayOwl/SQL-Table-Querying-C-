@@ -15,10 +15,13 @@ namespace COMP2614Assign05
 
             try
             {
-                // CustomerCollection customers = CustomerRepository.GetAllCustomers();
-                CustomerCollection customers = CustomerRepository.GetAllProvincesFromCustomers();
+                CustomerCollection customers = CustomerRepository.GetAllCustomers();
+                ProvincesCollection provinces = ProvincesRepository.GetAllProvincesFromCustomers();
 
                 ConsolePrinter.PrintCustomerCollection(customers);
+                ConsolePrinter.PrintProvincesCollection(provinces);
+
+
 
             }
             catch (SqlException ex)

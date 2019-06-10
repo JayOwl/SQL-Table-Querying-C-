@@ -50,6 +50,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provinces.cs" />
+    <Compile Include="ProvincesCollection.cs" />
+    <Compile Include="ProvincesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
