@@ -19,14 +19,14 @@ namespace COMP2614Assign05
                                                       TrustServerCertificate=False;
                                                       Connection Timeout=30;";
 
-        public static CustomerCollection GetAllCustomers()
+        public static CustomerCollection GetAllCustomers(string byProvince)
         {
+            
             CustomerCollection customers;
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                string query = @"SELECT CustomerCode, CompanyName, Address, City, Province, PostalCode, CreditHold
-                                From Customer";
+                string query = $"SELECT CustomerCode, CompanyName, Address, City, Province, PostalCode, CreditHold From Customer {byProvince}";
 
                 using (SqlCommand cmd = new SqlCommand())
                 {

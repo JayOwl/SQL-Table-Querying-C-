@@ -32,6 +32,5 @@ namespace COMP2614Assign05
             PostalCode = postalCode;
             CreditHold = creditHold;
         }
-
     }
 }

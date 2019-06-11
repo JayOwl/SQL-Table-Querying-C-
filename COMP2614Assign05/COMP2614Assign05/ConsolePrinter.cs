@@ -16,33 +16,29 @@ namespace COMP2614Assign05
             {
                 PrintCustomer(customer);
             }
-
         }
 
         public static void PrintCustomer(Customer customer)
         {
-            Console.WriteLine($"{customer.CustomerCode, -30}{customer.CompanyName,-30}{customer.Address,-30}{customer.City,-30}{customer.Province,-30}{customer.PostalCode,-30}{customer.CreditHold,-30}");
+            Console.WriteLine($"{customer.CompanyName,-30}{customer.City,-30}{customer.Province,-30}{customer.PostalCode,-30}{customer.CreditHold,-30}");
         }
 
         public static void PrintProvincesCollection(ProvincesCollection provinces)
         {
             string divider = new string('-', 70);
-
+            int count = 0;
 
             foreach (Provinces province in provinces)
             {
-               // var selectedProvinces = provinces.GroupBy(x => new { x.Province }).Select(g => g.First());
-
-                PrintProvinces(province);
-                //PrintProvinces(selectedProvinces);
-            }
-
+                count++;
+                Console.Write($"        {count}{":"}"); 
+                PrintProvinces(province);              
+            }   
         }
 
         public static void PrintProvinces(Provinces province)
-        {
-            Console.WriteLine($"{province.Province,-30}");
+        {         
+            Console.WriteLine($" {province.Province,-30}");                       
         }
-
     }
 }

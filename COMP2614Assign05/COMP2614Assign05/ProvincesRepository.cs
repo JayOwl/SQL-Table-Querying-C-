@@ -37,36 +37,22 @@ namespace COMP2614Assign05
                     provinces = new ProvincesCollection();
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-            
-                        string province = null;
-            
-
+                    {            
+                        string province = null;        
                         while (reader.Read())
                         {
-
-
                             if (!reader.IsDBNull(0))
                             {
                                 province = reader["Province"] as string;
-                            }
-
-                           
+                            }                           
 
                             provinces.Add(new Provinces(province));
-
-
                             province = null;
-
-
                         }
                     }
-
                 }
                 return provinces;
-
             }
-
         }
     }
 }

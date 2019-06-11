@@ -8,7 +8,6 @@ namespace COMP2614Assign05
 {
     class Provinces
     {
-
         public string Province { get; }
 
         public Provinces(string province)
