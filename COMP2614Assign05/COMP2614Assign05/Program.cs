@@ -30,6 +30,7 @@ namespace COMP2614Assign05
                         province = "WHERE Province = 'AB'";
                         CustomerCollection customers = CustomerRepository.GetAllCustomers(province);
                         Console.WriteLine("Customer listing for AB");
+                        Console.WriteLine("\r");
                         ConsolePrinter.PrintCustomerCollection(customers);
                         break;
 
@@ -37,6 +38,7 @@ namespace COMP2614Assign05
                         province = "WHERE Province = 'BC'";
                         CustomerCollection customersBC = CustomerRepository.GetAllCustomers(province);
                         Console.WriteLine("Customer listing for BC");
+                        Console.WriteLine("\r");
                         ConsolePrinter.PrintCustomerCollection(customersBC);
                         break;
 
@@ -44,6 +46,7 @@ namespace COMP2614Assign05
                         province = "WHERE Province = 'ON'";
                         CustomerCollection customersON = CustomerRepository.GetAllCustomers(province);
                         Console.WriteLine("Customer listing for ON");
+                        Console.WriteLine("\r");
                         ConsolePrinter.PrintCustomerCollection(customersON);
                         break;
 
@@ -51,6 +54,7 @@ namespace COMP2614Assign05
                         province = "WHERE Province = 'SK'";
                         CustomerCollection customersSK = CustomerRepository.GetAllCustomers(province);
                         Console.WriteLine("Customer listing for SK");
+                        Console.WriteLine("\r");
                         ConsolePrinter.PrintCustomerCollection(customersSK);
                         break;
 
@@ -58,10 +62,11 @@ namespace COMP2614Assign05
                         province = "";
                         CustomerCollection customersALL = CustomerRepository.GetAllCustomers(province);
                         Console.WriteLine("Customer listing for ALL");
+                        Console.WriteLine("\r");
                         ConsolePrinter.PrintCustomerCollection(customersALL);
                         break;
                     default:                 
-                        Console.WriteLine("Please make another entry");
+                        Console.WriteLine("Please try another entry");
                         break;    
                 }
             }

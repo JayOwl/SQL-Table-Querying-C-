@@ -79,12 +79,10 @@ namespace COMP2614Assign05
                                 postalCode = reader["PostalCode"] as string;
                             }
 
-                            //if (!reader.IsDBNull(6))
-                            //{
-                            //    postalCode = reader["CreditHold"] as bool;
-                            //}
-
-                            // creditHold = (bool)reader["CreditHold"];
+                            if (!reader.IsDBNull(6))
+                            {
+                                creditHold = (bool)reader["CreditHold"];
+                            }                         
 
                             customers.Add(new Customer(customerCode, companyName, address, city, province, postalCode, creditHold));
 
